@@ -11,6 +11,11 @@ app.use((req, res, next) => {
   next();
 });
 
+// Root endpoint
+app.get("/", (req, res) => {
+  res.send("Server is running!");
+});
+
 // GET /me endpoint
 app.get("/me", async (req, res) => {
   try {
